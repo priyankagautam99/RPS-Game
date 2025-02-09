@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: 100%;  
+        }
+        .container{
+            background-color:cornflowerblue;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            background-color:lightblue;
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid white;
+            text-align: center;
+        }
+        h2{
+            font-size: 200%;
+            color:black;
+        }
+        button{
+            background-color:lightblue;
+            border-radius: 20px;
+            width: 200px;
+            height: 50px;
+            border: 2px solid lightblue;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RPS Game</h2>
+        <div class="box">
+            <button onclick="rock()">
+                <img src="https://imsammylee.github.io/rock-paper-scissors/rock_image.png">
+            </button>
+            <button onclick="paper()">
+                <img src="https://imsammylee.github.io/rock-paper-scissors/scissors_image.png">
+            </button>
+            <button onclick="scissor()">
+                <img src="https://husseinhewehii.github.io/Rock_Paper_Scissors/paper.png">
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function rock(){
+            let  value = Math.floor(Math.random()*3);
+            let r = 0;
+            if(value==0){
+                alert("Draw");
+                console.log("computer selected rock and you selected rock so it's a draw");
+            }
+            else if(value==1){
+                alert("You lose");
+                console.log("computer selected paper and you selected rock so you lose");
+            }
+            else{
+                alert("You win");
+                console.log("computer selected scissor and you selected rock so you win");
+            }
+        }
+        function paper(){
+            let  value = Math.floor(Math.random()*3);
+            let p = 1;
+            if(value==0){
+                alert("You win");
+                console.log("computer selected rock and you selected paper so you win");
+            }
+            else if(value==1){
+                alert("Draw");
+                console.log("computer selected paper and you selected paper so it's a draw");
+            }
+            else{
+                alert("You lose");
+                console.log("computer selected scissor and you selected paper so you lose");
+            }
+        }
+        function scissor(){
+            let  value = Math.floor(Math.random()*3);
+            let s = 2;
+            if(value==0){
+                alert("You lose");
+                console.log("computer selected rock and you selected scissor so you lose");
+            }
+            else if(value==1){
+                alert("You win");
+                console.log("computer selected paper and you selected scissor so you win");
+            }
+            else{
+                alert("Draw");
+                console.log("computer selected scissor and you selected scissor so it's a draw");
+            }
+        }
+    </script>
+</body>
+</html>
